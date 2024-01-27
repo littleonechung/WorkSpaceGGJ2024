@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 9051137709085730455}
   - component: {fileID: 3708415220911871506}
   - component: {fileID: 5716642233459775153}
+  - component: {fileID: 7617704822794012006}
   m_Layer: 5
   m_Name: QuestionPanel
   m_TagString: Untagged
@@ -768,6 +769,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7617704822794012006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160560271791121120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c58391bd2ff02f4b9377d83af452fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _questionDatabase: {fileID: 0}
+  question: {fileID: 69853503426906120}
+  answers:
+  - {fileID: 219635408368980774}
+  - {fileID: 9024259162361974652}
+  - {fileID: 4002813910381215962}
 --- !u!1 &5742891058889730290
 GameObject:
   m_ObjectHideFlags: 0
