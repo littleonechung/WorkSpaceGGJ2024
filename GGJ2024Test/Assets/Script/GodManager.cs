@@ -7,16 +7,19 @@ using UnityEngine.UI;
 public class GodManager : MonoBehaviour
 {
     public Image godHpFill;
-    public Image godImage;
-    public Sprite[] godSprite;
+    //public Image godImage;
+    public GameObject angryFeedback;
+    public GameObject happyFeedback;
+    [SerializeField]private GodData data;
 
     private int godHp;
-    private string godId;
-
-    public void Setup(string _godId)
+    private GodName name = GodName.Default;
+    private GameObject GodGO = null;
+    
+    public void Setup(GodName _name)
     {
-        godId = _godId;
-
+        name = _name;
+        
     }
 
     public void OperateHp(int _value)
@@ -25,7 +28,7 @@ public class GodManager : MonoBehaviour
         godHpFill.fillAmount = godHp;
     }
 
-    private void ChangeGodImage()
+    private void Inita()
     {
        
     }
