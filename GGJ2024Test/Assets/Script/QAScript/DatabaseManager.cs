@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
 
 public class DatabaseManager : MonoBehaviour
 {
@@ -10,17 +11,48 @@ public class DatabaseManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI question;
     [SerializeField] private List<TextMeshProUGUI> answers;
 
+    private List<Question> currentQuestionList;
+    private int currentQuestionIndex;
+
+    public Action<Answer> onClickAnswerBtn;
     #region UI UPDATE METHODS
-    public void UpdateText(Question input)
+    private void UpdateText(Question input)
     {
         question.text = input.Content;
-        answers[0].text = input.Answers[0].Content;
-        answers[1].text = input.Answers[1].Content;
-        answers[2].text = input.Answers[2].Content;
+        foreach(var answer in answers)
+        {
+            answer.gameObject.SetActive(false); 
+        }
+        for (int i = 0; i < input.Answers.Count; i++) 
+        {
+            answers[i].gameObject.SetActive(true);
+            answers[i].text = input.Answers[i].Content;
+            if (i >= 3)
+                break;
+        }
     }
     #endregion
 
     #region GENERAL METHODS
+    public void SetQuestionList(GodName godName)
+    {
+        currentQuestionList = GetQuestionListViaGodName(godName);
+    }
+
+    public void UpdateQuestion(bool isFirst)
+    {
+        if (isFirst)  
+            currentQuestionIndex = 0; 
+        else 
+            currentQuestionIndex++;
+        UpdateText( currentQuestionList[currentQuestionIndex]);
+    }
+
+    public bool CheckNoQuestion()
+    {
+        return currentQuestionIndex + 1 >= currentQuestionList.Count;
+    }
+
     public List<Question> GetQuestionListViaGodName(GodName godName)
     {
         foreach (QuestionDictItem questionDictItem in _questionDatabase.script)
@@ -42,10 +74,15 @@ public class DatabaseManager : MonoBehaviour
     {
         for (int i = list.Count - 1; i > 0; i--)
         {
-            int j = Random.Range(0, i + 1);
+            int j = UnityEngine.Random.Range(0, i + 1);
             (list[j], list[i]) = (list[i], list[j]);
         }
         return list;
     }
     #endregion
+
+    public void OnAnswerClick(int answerIndex)
+    {
+        onClickAnswerBtn?.Invoke(currentQuestionList[currentQuestionIndex].Answers[answerIndex]);
+    }
 }

@@ -5,9 +5,16 @@ using UnityEngine;
 [System.Serializable]
 public enum GodName
 {
-    Default,
-    Winnie,
+    Default = 0,
+    Tutorial = 1,
+    Kindness = 2,
+    Loki = 3,
+    CatGod = 4,
+    SalaryMan = 5,
+    Winnie = 6,
+    EndGod = 7,
 }
+
 [System.Serializable]
 public class GodDataSet
 {
@@ -18,5 +25,5 @@ public class GodDataSet
 [CreateAssetMenu(fileName = "GodData",menuName ="GodData/CreateData",order =1)]
 public class GodData : ScriptableObject
 {
-    public GodDataSet[] GodDataAry;
+    public List<GodDataSet> GodDataAry;
 }
