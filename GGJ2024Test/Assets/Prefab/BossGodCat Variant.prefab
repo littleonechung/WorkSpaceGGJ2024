@@ -216,11 +216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5424230973926883921, guid: 046fb98debeff92408441a25bfa9af3a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 607.32983
+      value: 574
       objectReference: {fileID: 0}
     - target: {fileID: 5424230973926883921, guid: 046fb98debeff92408441a25bfa9af3a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 332.19
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5846515028448144463, guid: 046fb98debeff92408441a25bfa9af3a, type: 3}
       propertyPath: m_text
@@ -230,6 +230,14 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5846515028448144463, guid: 046fb98debeff92408441a25bfa9af3a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5846515028448144463, guid: 046fb98debeff92408441a25bfa9af3a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6783881373206088368, guid: 046fb98debeff92408441a25bfa9af3a, type: 3}
       propertyPath: m_Name
       value: BossGodCat
