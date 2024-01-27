@@ -298,6 +298,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &685872412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5160560271791121120, guid: fde3da8ac062f4d4bacd391b98ad6102, type: 3}
+  m_PrefabInstance: {fileID: 3580305409691113606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &685872413 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9051137709085730455, guid: fde3da8ac062f4d4bacd391b98ad6102, type: 3}
@@ -676,6 +681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestionPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5160560271791121120, guid: fde3da8ac062f4d4bacd391b98ad6102, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5915223416103011842, guid: fde3da8ac062f4d4bacd391b98ad6102, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -901,6 +910,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6767435016977627620, guid: 247e621c84618114abbd25f553fb7ff8, type: 3}
+      propertyPath: godManager
+      value: 
+      objectReference: {fileID: 6033059272414419002}
+    - target: {fileID: 6767435016977627620, guid: 247e621c84618114abbd25f553fb7ff8, type: 3}
+      propertyPath: questionPanel
+      value: 
+      objectReference: {fileID: 685872412}
     - target: {fileID: 9205580802150771646, guid: 247e621c84618114abbd25f553fb7ff8, type: 3}
       propertyPath: godHpFill
       value: 
@@ -915,6 +932,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1737061609504387575, guid: 247e621c84618114abbd25f553fb7ff8, type: 3}
   m_PrefabInstance: {fileID: 6033059272414419000}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6033059272414419002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9205580802150771646, guid: 247e621c84618114abbd25f553fb7ff8, type: 3}
+  m_PrefabInstance: {fileID: 6033059272414419000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413819aa0b248fe4394e807db1b651e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9179813383499706932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1014,6 +1042,10 @@ PrefabInstance:
     - target: {fileID: 6765673994208489047, guid: 39d6e5a6af62e1f42a7a569451243bba, type: 3}
       propertyPath: m_Name
       value: HahaPointSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765673994208489047, guid: 39d6e5a6af62e1f42a7a569451243bba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

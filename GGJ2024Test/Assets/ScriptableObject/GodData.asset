@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GodDataAry:
   - GodName: 0
-    GodPrefab: {fileID: 0}
+    GodPrefab: {fileID: 1557193703420235440, guid: 273d37aa9c617f741b103592523d2e5f, type: 3}

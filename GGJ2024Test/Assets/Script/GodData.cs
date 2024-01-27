@@ -8,6 +8,13 @@ public enum GodName
     Default,
     Winnie,
 }
+
+public enum GodFeeling
+{
+    Happy,
+    Angry,
+}
+
 [System.Serializable]
 public class GodDataSet
 {
