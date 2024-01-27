@@ -19,7 +19,7 @@ public struct Question
 [System.Serializable]
 public struct QuestionDictItem
 {
-    [SerializeField] public string Key;
+    [SerializeField] public GodName Key;
     [SerializeField] public List<Question> Questions;
 }
 
