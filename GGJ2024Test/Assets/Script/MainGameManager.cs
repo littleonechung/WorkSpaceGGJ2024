@@ -8,6 +8,7 @@ public enum GameStatus
     GameInit,
     ShowQuestion,
     WaitAnser,
+    SwitchGod,
 }
 
 
@@ -15,6 +16,7 @@ public enum GameStatus
 public class MainGameManager : MonoBehaviour
 {
     public GameObject questionPanel;
+    public DatabaseManager databaseManager;
     public GodManager godManager;
 
     private GodName currentGod;
@@ -25,11 +27,16 @@ public class MainGameManager : MonoBehaviour
         switch(status)
         {
             case GameStatus.GameInit:
-                godManager.Setup(GodName.Default);
+                InitGame();              
+                ChangeGameStatus(GameStatus.ShowQuestion);
+                break;
+            case GameStatus.SwitchGod:
+                SwitchGod();
+                godManager.Setup(currentGod);
+                databaseManager.SetQuestionList(currentGod);
                 break;
             case GameStatus.ShowQuestion:
                 ShowQuestion();
-
                 break;
             case GameStatus.WaitAnser:
                 break;
@@ -37,16 +44,26 @@ public class MainGameManager : MonoBehaviour
             default: break;
         }
     }
+    private void InitGame()
+    {
+        databaseManager.onClickAnswerBtn += OnClickAnser;
+    }
+
+    private void SwitchGod()
+    {
+        currentGod = GodName.Default;
+    }
 
     private void ShowQuestion()
     {
         questionPanel.SetActive(true);
-
+        databaseManager.UpdateQuestion();
     }
 
-    private void OnClickAnser(GodFeeling feeling)
+    private void OnClickAnser(Answer answer)
     {
         questionPanel.SetActive(false);
+        GodFeeling feeling = answer.IsCorrect ? GodFeeling.Happy : GodFeeling.Angry;
         ShowFeedback(feeling);
     }
 

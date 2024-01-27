@@ -330,7 +330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1662440061475376522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7617704822794012006}
+        m_TargetAssemblyTypeName: DatabaseManager, Assembly-CSharp
+        m_MethodName: OnAnserClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4574278094699704927
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c58391bd2ff02f4b9377d83af452fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _questionDatabase: {fileID: 0}
+  _questionDatabase: {fileID: 11400000, guid: a27b7ffd57f2b614ea3e927a99d364fd, type: 2}
   question: {fileID: 69853503426906120}
   answers:
   - {fileID: 219635408368980774}
@@ -1176,7 +1188,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 552062914516441906}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7617704822794012006}
+        m_TargetAssemblyTypeName: DatabaseManager, Assembly-CSharp
+        m_MethodName: OnAnserClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7992187701133661017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,4 +1387,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5655577187183492647}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7617704822794012006}
+        m_TargetAssemblyTypeName: DatabaseManager, Assembly-CSharp
+        m_MethodName: OnAnserClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
