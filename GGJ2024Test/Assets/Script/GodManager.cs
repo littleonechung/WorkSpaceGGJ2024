@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GodManager : MonoBehaviour
 {
@@ -28,8 +29,12 @@ public class GodManager : MonoBehaviour
         godHpFill.fillAmount = godHp;
     }
 
-    private void Inita()
+    private void InstantiateGodGO(GodName name)
     {
-       
+        GodDataSet dataSet = data.GodDataAry.Find(s => s.GodName == name);
+        if (dataSet != null) 
+        {
+            
+        }
     }
 }

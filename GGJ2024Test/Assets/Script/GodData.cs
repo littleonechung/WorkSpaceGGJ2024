@@ -18,5 +18,5 @@ public class GodDataSet
 [CreateAssetMenu(fileName = "GodData",menuName ="GodData/CreateData",order =1)]
 public class GodData : ScriptableObject
 {
-    public GodDataSet[] GodDataAry;
+    public List<GodDataSet> GodDataAry;
 }
