@@ -13,5 +13,15 @@ MonoBehaviour:
   m_Name: GodData
   m_EditorClassIdentifier: 
   GodDataAry:
-  - GodName: 0
-    GodPrefab: {fileID: 0}
+  - GodName: 1
+    GodPrefab: {fileID: 1879042362416700453, guid: 96d3c60cfc195b64fbd5269f4a12a970, type: 3}
+  - GodName: 2
+    GodPrefab: {fileID: 4765850731257395609, guid: 046fb98debeff92408441a25bfa9af3a, type: 3}
+  - GodName: 3
+    GodPrefab: {fileID: 7202554922035752573, guid: a8128ddd3f5c71e4da27600f2cc300d2, type: 3}
+  - GodName: 4
+    GodPrefab: {fileID: 5778503230616669480, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
+  - GodName: 5
+    GodPrefab: {fileID: 6631901801769528723, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
+  - GodName: 6
+    GodPrefab: {fileID: 6847486349930144410, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
