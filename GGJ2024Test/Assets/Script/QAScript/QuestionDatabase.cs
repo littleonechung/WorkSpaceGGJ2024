@@ -6,7 +6,7 @@ using QuestionDict = System.Collections.Generic.List<QuestionDictItem>;
 public struct Answer
 {
     [SerializeField] public string Content;
-    [SerializeField] public string Respondse;
+    [SerializeField] public string Response;
     [SerializeField] public int Score;
     [SerializeField] public bool IsCorrect;
 }
