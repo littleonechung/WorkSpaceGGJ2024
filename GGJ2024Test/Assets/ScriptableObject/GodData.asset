@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664df9da0e3d1784381ae97114d94012, type: 3}
   m_Name: GodData
   m_EditorClassIdentifier: 
+  GodDataAry:
+  - GodName: 0
+    GodPrefab: {fileID: 0}

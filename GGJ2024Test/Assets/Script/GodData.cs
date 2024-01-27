@@ -6,7 +6,13 @@ using UnityEngine;
 public enum GodName
 {
     Default,
+    Tutorial,
+    Kindness,
+    Loki,
+    CatGod,
+    SalaryMan,
     Winnie,
+    EndGod,
 }
 [System.Serializable]
 public class GodDataSet
