@@ -4,12 +4,13 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using System;
+using UniRx;
 
 public class DatabaseManager : MonoBehaviour
 {
     [SerializeField] private QuestionDatabase _questionDatabase;
-    [SerializeField] private TextMeshProUGUI question;
-    [SerializeField] private List<TextMeshProUGUI> answers;
+    [SerializeField] private FadedText question;
+    [SerializeField] private List<FadedText> answers;
     [SerializeField] private List<GameObject> btns;
 
     private List<Question> currentQuestionList;
@@ -19,18 +20,20 @@ public class DatabaseManager : MonoBehaviour
     #region UI UPDATE METHODS
     private void UpdateText(Question input)
     {
-        question.text = input.Content;
-        foreach(var btn in btns)
+        foreach (var btn in btns)
         {
-            btn.SetActive(false); 
+            btn.SetActive(false);
         }
-        for (int i = 0; i < input.Answers.Count; i++) 
-        {
-            btns[i].SetActive(true);
-            answers[i].text = input.Answers[i].Content;
-            if (i >= 3)
-                break;
-        }
+        question.GenerateText(input.Content);
+        Observable.Timer(System.TimeSpan.FromSeconds(question.GetFadeTime())).Subscribe(_ => {
+            for (int i = 0; i < input.Answers.Count; i++)
+            {
+                btns[i].SetActive(true);
+                answers[i].GenerateText(input.Answers[i].Content);
+                if (i >= 3)
+                    break;
+            }
+        }).AddTo(this);
     }
     #endregion
 

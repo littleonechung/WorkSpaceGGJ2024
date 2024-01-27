@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 9100575924327389930}
   - component: {fileID: 3846605111866978833}
   - component: {fileID: 4002813910381215962}
+  - component: {fileID: 1420250185858825754}
   m_Layer: 5
   m_Name: TextAnswer (TMP)
   m_TagString: Untagged
@@ -209,6 +210,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1420250185858825754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815024681008502283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046a31f4910e3f54d96a8f36e88ab2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextAppearSpeed: 0.2
 --- !u!1 &2946467786895886649
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +368,7 @@ GameObject:
   - component: {fileID: 3536544709794577089}
   - component: {fileID: 8126357484062028958}
   - component: {fileID: 69853503426906120}
+  - component: {fileID: 2288800251551433666}
   m_Layer: 5
   m_Name: QuestionText (TMP)
   m_TagString: Untagged
@@ -477,6 +492,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2288800251551433666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574278094699704927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046a31f4910e3f54d96a8f36e88ab2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextAppearSpeed: 0.2
 --- !u!1 &4890219200218886634
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,11 +822,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questionDatabase: {fileID: 11400000, guid: 56b26c4d3cd2b9642a3e3d2a8147a9dc, type: 2}
-  question: {fileID: 69853503426906120}
+  question: {fileID: 2288800251551433666}
   answers:
-  - {fileID: 219635408368980774}
-  - {fileID: 9024259162361974652}
-  - {fileID: 4002813910381215962}
+  - {fileID: 9027324290107827436}
+  - {fileID: 8429418748473540798}
+  - {fileID: 1420250185858825754}
   btns:
   - {fileID: 2946467786895886649}
   - {fileID: 6409690952293660694}
@@ -814,6 +842,7 @@ GameObject:
   - component: {fileID: 6847169674319774023}
   - component: {fileID: 2523154743943070581}
   - component: {fileID: 9024259162361974652}
+  - component: {fileID: 8429418748473540798}
   m_Layer: 5
   m_Name: TextAnswer (TMP)
   m_TagString: Untagged
@@ -937,6 +966,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8429418748473540798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742891058889730290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046a31f4910e3f54d96a8f36e88ab2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextAppearSpeed: 0.2
 --- !u!1 &5976133129803634849
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +990,7 @@ GameObject:
   - component: {fileID: 2342312099270185210}
   - component: {fileID: 2248535877710135968}
   - component: {fileID: 219635408368980774}
+  - component: {fileID: 9027324290107827436}
   m_Layer: 5
   m_Name: TextAnswer (TMP)
   m_TagString: Untagged
@@ -1071,6 +1114,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9027324290107827436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5976133129803634849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046a31f4910e3f54d96a8f36e88ab2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextAppearSpeed: 0.2
 --- !u!1 &6409690952293660694
 GameObject:
   m_ObjectHideFlags: 0
