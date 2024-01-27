@@ -10,6 +10,7 @@ public class DatabaseManager : MonoBehaviour
     [SerializeField] private QuestionDatabase _questionDatabase;
     [SerializeField] private TextMeshProUGUI question;
     [SerializeField] private List<TextMeshProUGUI> answers;
+    [SerializeField] private List<GameObject> btns;
 
     private List<Question> currentQuestionList;
     private int currentQuestionIndex;
@@ -19,13 +20,13 @@ public class DatabaseManager : MonoBehaviour
     private void UpdateText(Question input)
     {
         question.text = input.Content;
-        foreach(var answer in answers)
+        foreach(var btn in btns)
         {
-            answer.gameObject.SetActive(false); 
+            btn.SetActive(false); 
         }
         for (int i = 0; i < input.Answers.Count; i++) 
         {
-            answers[i].gameObject.SetActive(true);
+            btns[i].SetActive(true);
             answers[i].text = input.Answers[i].Content;
             if (i >= 3)
                 break;
