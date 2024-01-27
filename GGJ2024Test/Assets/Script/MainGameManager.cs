@@ -20,6 +20,8 @@ public class MainGameManager : MonoBehaviour
     public DatabaseManager databaseManager;
     public GodManager godManager;
 
+    [SerializeField]
+    GodName debugGod = GodName.Default;
     private GodName currentGod;
 
     private void Start()
@@ -62,7 +64,14 @@ public class MainGameManager : MonoBehaviour
 
     private void SwitchGod()
     {
-        currentGod = GodName.Tutorial;
+        if (debugGod != GodName.Default)
+        {
+            currentGod = debugGod;
+        }
+        else
+        {
+            currentGod = GodName.Tutorial;
+        }
     }
 
     private void ShowQuestion(bool first = false)
