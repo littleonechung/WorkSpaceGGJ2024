@@ -19,11 +19,11 @@ public class GodManager : MonoBehaviour
     private GameObject GodGO = null;
     private GodUICtrl currentGodUICtrl;
 
-    public void Setup(GodName _name , int defaultHp = 30)
+    public void Setup(GodName _name)
     {
         godName = _name;
         InstantiateGodGO(godName);
-        godHp = defaultHp;
+        godHp = 0;
         godHpFill.fillAmount = godHp/100;
     }
 
