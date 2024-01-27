@@ -49,8 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   godHpFill: {fileID: 0}
-  godImage: {fileID: 0}
-  godSprite: []
+  angryFeedback: {fileID: 0}
+  happyFeedback: {fileID: 0}
+  data: {fileID: 11400000, guid: 5ed83a03d1ccc414c84461bf82f72f85, type: 2}
 --- !u!1 &5647820576315087322
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,3 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9156e483ca88d1b48a049139aa0bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questionPanel: {fileID: 0}
+  databaseManager: {fileID: 0}
+  godManager: {fileID: 9205580802150771646}

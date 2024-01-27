@@ -39,13 +39,18 @@ public class DatabaseManager : MonoBehaviour
         currentQuestionList = GetQuestionListViaGodName(godName);
     }
 
-    public void UpdateQuestion(bool isFirst = false)
+    public void UpdateQuestion(bool isFirst)
     {
         if (isFirst)  
             currentQuestionIndex = 0; 
         else 
             currentQuestionIndex++;
         UpdateText( currentQuestionList[currentQuestionIndex]);
+    }
+
+    public bool CheckNoQuestion()
+    {
+        return currentQuestionIndex + 1 >= currentQuestionList.Count;
     }
 
     public List<Question> GetQuestionListViaGodName(GodName godName)
@@ -76,7 +81,7 @@ public class DatabaseManager : MonoBehaviour
     }
     #endregion
 
-    public void OnAnserClick(int answerIndex)
+    public void OnAnswerClick(int answerIndex)
     {
         onClickAnswerBtn?.Invoke(currentQuestionList[currentQuestionIndex].Answers[answerIndex]);
     }

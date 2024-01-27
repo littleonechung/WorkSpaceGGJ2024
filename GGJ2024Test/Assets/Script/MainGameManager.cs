@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using static UnityEngine.ParticleSystem;
 
 public enum GameStatus
 {
     GameInit,
-    ShowQuestion,
-    WaitAnser,
     SwitchGod,
+    ShowQuestion,
+    WaitShowResponse,
+    NextQuestion,
+
 }
-
-
 
 public class MainGameManager : MonoBehaviour
 {
@@ -21,26 +22,36 @@ public class MainGameManager : MonoBehaviour
 
     private GodName currentGod;
 
-
+    private void Start()
+    {
+        ChangeGameStatus(GameStatus.GameInit);
+    }
     private void ChangeGameStatus(GameStatus status)
     {
         switch(status)
         {
             case GameStatus.GameInit:
                 InitGame();              
-                ChangeGameStatus(GameStatus.ShowQuestion);
+                ChangeGameStatus(GameStatus.SwitchGod);
                 break;
             case GameStatus.SwitchGod:
                 SwitchGod();
                 godManager.Setup(currentGod);
                 databaseManager.SetQuestionList(currentGod);
+                ChangeGameStatus(GameStatus.ShowQuestion);
                 break;
             case GameStatus.ShowQuestion:
-                ShowQuestion();
+                ShowQuestion(true);
                 break;
-            case GameStatus.WaitAnser:
+            case GameStatus.WaitShowResponse:
+                Observable.Timer(System.TimeSpan.FromSeconds(2f)).Subscribe(_ => { ChangeGameStatus(GameStatus.NextQuestion); }).AddTo(this);
                 break;
-            
+            case GameStatus.NextQuestion:
+                if(databaseManager.CheckNoQuestion())
+                    ChangeGameStatus(GameStatus.SwitchGod);
+                else
+                    ShowQuestion();
+                break;
             default: break;
         }
     }
@@ -51,32 +62,21 @@ public class MainGameManager : MonoBehaviour
 
     private void SwitchGod()
     {
-        currentGod = GodName.Default;
+        currentGod = GodName.Tutorial;
     }
 
-    private void ShowQuestion()
+    private void ShowQuestion(bool first = false)
     {
         questionPanel.SetActive(true);
-        databaseManager.UpdateQuestion();
+        godManager.ResetGodUI();
+        databaseManager.UpdateQuestion(first);
     }
 
     private void OnClickAnser(Answer answer)
     {
         questionPanel.SetActive(false);
-        GodFeeling feeling = answer.IsCorrect ? GodFeeling.Happy : GodFeeling.Angry;
-        ShowFeedback(feeling);
-    }
-
-    private void ShowFeedback(GodFeeling feeling)
-    {
-        switch (feeling)
-        {
-            case GodFeeling.Angry:
-                break;
-            case GodFeeling.Happy:
-                break;
-            default: break;
-        }
+        godManager.ShowResponse(answer);
+        ChangeGameStatus(GameStatus.WaitShowResponse);
     }
    
 }

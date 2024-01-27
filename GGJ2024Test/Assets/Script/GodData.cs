@@ -15,12 +15,6 @@ public enum GodName
     EndGod,
 }
 
-public enum GodFeeling
-{
-    Happy,
-    Angry,
-}
-
 [System.Serializable]
 public class GodDataSet
 {
