@@ -252,41 +252,45 @@ MonoBehaviour:
     - Content: "\u9019\u4E16\u4E0A\u6700\u68D2\u7684\u98DF\u7269\u662F\u4EC0\u9EBC\uFF1F"
       Answers:
       - Content: "\u9ED1\u7CD6"
-        Respondse: "\u751F\u6C23\u7684\u81C9\uFF08\u6263\u5206\uFF09"
+        Respondse: 
         Score: -30
         IsCorrect: 0
       - Content: "\u8702\u871C"
-        Respondse: "\u6EFF\u610F\u7684\u81C9\uFF08\u6EFF\u610F\uFF09"
+        Respondse: 
         Score: 30
         IsCorrect: 1
     - Content: "1989/6/4\u6709\u767C\u751F\u4EC0\u9EBC\u4E8B\u55CE\uFF1F"
       Answers:
       - Content: 
-        Respondse: "\u6EFF\u610F\u7684\u81C9\uFF08\u6EFF\u610F\uFF09"
+        Respondse: 
         Score: 30
         IsCorrect: 1
       - Content: "\u6C92\u6709"
-        Respondse: "\u6EFF\u610F\u7684\u81C9\uFF08\u6EFF\u610F\uFF09"
+        Respondse: 
         Score: 30
         IsCorrect: 1
     - Content: "\u4F60\u6709\u4EC0\u9EBC\u554F\u984C\u55CE"
       Answers:
       - Content: "\u6C92\u6709"
-        Respondse: "\u6EFF\u610F\u7684\u81C9\uFF08\u6EFF\u610F\uFF09"
+        Respondse: 
         Score: 30
         IsCorrect: 1
       - Content: "\u6C92\u6709"
-        Respondse: "\u6EFF\u610F\u7684\u81C9\uFF08\u6EFF\u610F\uFF09"
+        Respondse: 
         Score: 30
         IsCorrect: 1
     - Content: "\u6709\u53CD\u5C0D\u7684\u8209\u624B"
       Answers:
       - Content: "\u6C92\u6709"
-        Respondse: "\u6EFF\u610F\u7684\u81C9\uFF08\u6EFF\u610F\uFF09"
+        Respondse: 
         Score: 30
         IsCorrect: 1
       - Content: "\u6C92\u6709"
-        Respondse: "\u6EFF\u610F\u7684\u81C9\uFF08\u6EFF\u610F\uFF09"
+        Respondse: 
+        Score: 30
+        IsCorrect: 1
+      - Content: "\u6C92\u6709"
+        Respondse: 
         Score: 30
         IsCorrect: 1
   - Key: 7
