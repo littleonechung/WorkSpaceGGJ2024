@@ -5,14 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public enum GodName
 {
-    Default,
-    Tutorial,
-    Kindness,
-    Loki,
-    CatGod,
-    SalaryMan,
-    Winnie,
-    EndGod,
+    Default = 0,
+    Tutorial = 1,
+    Kindness = 2,
+    Loki = 3,
+    CatGod = 4,
+    SalaryMan = 5,
+    Winnie = 6,
+    EndGod = 7,
 }
 
 public enum GodFeeling
