@@ -13,6 +13,7 @@ public enum GameStatus
     ShowQuestion,
     WaitShowResponse,
     NextQuestion,
+    End,
 
 }
 
@@ -20,6 +21,8 @@ public class MainGameManager : MonoBehaviour
 {
     public GameObject questionPanel;
     public GameObject infoPanel;
+    public EndManager endManager;
+    public CheckIfPlayed checkIfPlayed;
     public DatabaseManager databaseManager;
     public GodManager godManager;
 
@@ -29,6 +32,7 @@ public class MainGameManager : MonoBehaviour
     GodName debugGod = GodName.Default;
 
     int currentGodIndex = 0;
+    bool isFirstGame = false;
     private GodName currentGod;
     private List<GodName> currentGodList = new List<GodName>();
     [SerializeField]
@@ -39,6 +43,15 @@ public class MainGameManager : MonoBehaviour
         ChangeGameStatus(GameStatus.GameInit);
     }
 
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            checkIfPlayed.PlayedBefore = true;
+            checkIfPlayed.gameObject.SetActive(checkIfPlayed.PlayedBefore);
+        }
+    }
     public void StartGame()
     {
         ChangeGameStatus(GameStatus.SwitchGod);
@@ -66,7 +79,7 @@ public class MainGameManager : MonoBehaviour
                 ShowQuestion(true);
                 break;
             case GameStatus.WaitShowResponse:
-                Observable.Timer(System.TimeSpan.FromSeconds(5f)).Subscribe(_ => { ChangeGameStatus(GameStatus.NextQuestion); }).AddTo(this);
+                Observable.Timer(System.TimeSpan.FromSeconds(3f)).Subscribe(_ => { ChangeGameStatus(GameStatus.NextQuestion); }).AddTo(this);
                 break;
             case GameStatus.NextQuestion:
                 if(databaseManager.CheckNoQuestion())
@@ -74,13 +87,31 @@ public class MainGameManager : MonoBehaviour
                 else
                     ShowQuestion();
                 break;
+            case GameStatus.End:
+                endManager.SuccessEnd();
+                StartCoroutine(ShowEnding());
+                break;
             default: break;
         }
     }
 
+    IEnumerator ShowEnding()
+    {
+        endManager.FadeIn();
+        yield return new WaitForSeconds(4f);
+        endManager.FadeOut();
+        yield return new WaitForSeconds(1f);
+        endManager.SetActive(false);
+        ChangeGameStatus(GameStatus.GameInit);
+    }
+
     private void InitGame()
     {
-        databaseManager.onClickAnswerBtn += OnClickAnser;
+        if (!isFirstGame)
+        {
+            databaseManager.onClickAnswerBtn += OnClickAnser;
+            isFirstGame = true;
+        }
         titleCanvas.gameObject.SetActive(true);
         currentGodList.Clear();
         GodName[] enumValues = (GodName[])Enum.GetValues(typeof(GodName));
@@ -91,6 +122,10 @@ public class MainGameManager : MonoBehaviour
                 currentGodList.Add(godName);
             }
         }
+
+        checkIfPlayed.Check();
+        currentGodIndex = 0;
+        currentGod = GodName.Default;
     }
 
     private void SwitchGod()
@@ -98,6 +133,10 @@ public class MainGameManager : MonoBehaviour
         if (debugGod != GodName.Default)
         {
             currentGod = debugGod;
+        }
+        else if (currentGod == GodName.EndGod)
+        {
+            ChangeGameStatus(GameStatus.End);
         }
         else
         {

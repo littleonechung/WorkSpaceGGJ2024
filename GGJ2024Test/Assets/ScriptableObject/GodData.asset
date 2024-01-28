@@ -27,3 +27,5 @@ MonoBehaviour:
     GodPrefab: {fileID: 6631901801769528723, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
   - GodName: 6
     GodPrefab: {fileID: 6847486349930144410, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+  - GodName: 7
+    GodPrefab: {fileID: 1879042362416700453, guid: 96d3c60cfc195b64fbd5269f4a12a970, type: 3}
