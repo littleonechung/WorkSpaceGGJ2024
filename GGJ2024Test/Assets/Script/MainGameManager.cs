@@ -20,21 +20,31 @@ public class MainGameManager : MonoBehaviour
     public DatabaseManager databaseManager;
     public GodManager godManager;
 
+    [SerializeField]
+    GameObject titleCanvas = null;
+    [SerializeField]
+    GodName debugGod = GodName.Default;
     private GodName currentGod;
 
     private void Start()
     {
         ChangeGameStatus(GameStatus.GameInit);
     }
+
+    public void StartGame()
+    {
+        ChangeGameStatus(GameStatus.SwitchGod);
+    }
+
     private void ChangeGameStatus(GameStatus status)
     {
         switch(status)
         {
             case GameStatus.GameInit:
                 InitGame();              
-                ChangeGameStatus(GameStatus.SwitchGod);
                 break;
             case GameStatus.SwitchGod:
+                titleCanvas.SetActive(false);
                 SwitchGod();
                 godManager.Setup(currentGod);
                 databaseManager.SetQuestionList(currentGod);
@@ -55,14 +65,23 @@ public class MainGameManager : MonoBehaviour
             default: break;
         }
     }
+
     private void InitGame()
     {
         databaseManager.onClickAnswerBtn += OnClickAnser;
+        titleCanvas.gameObject.SetActive(true);
     }
 
     private void SwitchGod()
     {
-        currentGod = GodName.Tutorial;
+        if (debugGod != GodName.Default)
+        {
+            currentGod = debugGod;
+        }
+        else
+        {
+            currentGod = GodName.Tutorial;
+        }
     }
 
     private void ShowQuestion(bool first = false)

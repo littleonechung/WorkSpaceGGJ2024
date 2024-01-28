@@ -135,7 +135,7 @@ MonoBehaviour:
         Response: "\u6EFE"
         Score: -30
         IsCorrect: 0
-      - Content: "\u55B5\u55B5\u55B5"
+      - Content: "\u55B5PASS"
         Response: "\u4F60\u5F15\u8D77\u6211\u7684\u8208\u8DA3\u4E86\uFF0C\u51E1\u4EBA"
         Score: 30
         IsCorrect: 1

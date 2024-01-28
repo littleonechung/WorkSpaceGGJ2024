@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class FadedText : MonoBehaviour
 {
-    [SerializeField] public float TextAppearSpeed = 1.0f;
+    public float TextAppearSpeed = 1.0f;
 
     private TextMeshProUGUI m_TextMeshPro;
+    private string currentContent;
     private void Awake()
     {
         m_TextMeshPro = this.gameObject.GetComponent<TextMeshProUGUI>();
     }
     public void GenerateText(string src)
     {
+        currentContent = src;
         StartCoroutine(generateText(src, m_TextMeshPro));
     }
     private IEnumerator generateText(string src, TextMeshProUGUI m_TextMeshPro)
@@ -25,5 +27,10 @@ public class FadedText : MonoBehaviour
             m_TextMeshPro.SetText(text);
             yield return new WaitForSeconds(TextAppearSpeed);
         }
+    }
+
+    public float GetFadeTime()
+    {
+        return currentContent.Length * TextAppearSpeed;
     }
 }
