@@ -124,6 +124,7 @@ public class MainGameManager : MonoBehaviour
     private void ShowQuestion(bool first = false)
     {
         infoPanel.SetActive(false);
+        godManager.ResetGodUI();
         questionPanel.SetActive(true);
         databaseManager.UpdateQuestion(first);
     }

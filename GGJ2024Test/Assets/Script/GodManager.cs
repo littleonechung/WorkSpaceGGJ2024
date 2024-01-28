@@ -35,8 +35,11 @@ public class GodManager : MonoBehaviour
             currentGodUICtrl.AngryFeedback.SetActive(!answer.IsCorrect);
             currentGodUICtrl.HappyFeedback.SetActive(answer.IsCorrect);
             currentGodUICtrl.HappySkin.SetActive(answer.IsCorrect);
-            currentGodUICtrl.DialogBubble.SetActive(true);
-            currentGodUICtrl.DialogText.text = answer.Response;
+            if (!string.IsNullOrEmpty(answer.Response))
+            {
+                currentGodUICtrl.DialogBubble.SetActive(true);
+                currentGodUICtrl.DialogText.text = answer.Response;
+            }
         }
         OperateHp(answer.Score);
     }
