@@ -81,6 +81,8 @@ public class GodManager : MonoBehaviour
     {
         if (currentGodUICtrl != null)
         {
+            currentGodUICtrl.AngrySkin.SetActive(false);
+            currentGodUICtrl.HappySkin.SetActive(false) ;
             currentGodUICtrl.AngryFeedback.SetActive(false);
             currentGodUICtrl.HappyFeedback.SetActive(false);
             currentGodUICtrl.DialogBubble.SetActive(false);

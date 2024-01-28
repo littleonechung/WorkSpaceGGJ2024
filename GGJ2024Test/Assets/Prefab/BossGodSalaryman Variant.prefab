@@ -160,7 +160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 527157008600390492, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -34
+      value: -39
       objectReference: {fileID: 0}
     - target: {fileID: 1266028390499004531, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_IsActive
@@ -168,6 +168,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2443960392486736500, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112993394562413532, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4059264043716192902, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
@@ -188,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562365555783938739, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4760732339284857819, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -198,6 +202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossGodSalaryMan
       objectReference: {fileID: 0}
+    - target: {fileID: 5068388876375101165, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1cf616395cda29245aa2c79d9118432f, type: 3}
     - target: {fileID: 5399154514418287052, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -228,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7335342914282525554, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: -39
       objectReference: {fileID: 0}
     - target: {fileID: 7699414542545753991, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_Pivot.x
@@ -310,11 +318,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8088282175544010819, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8161013209874365111, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b407f89d31567b240928fb1dbd9eea59, type: 3}
     - target: {fileID: 8278667439863724980, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1cf616395cda29245aa2c79d9118432f, type: 3}
+    - target: {fileID: 8990756247307178044, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1cf616395cda29245aa2c79d9118432f, type: 3}

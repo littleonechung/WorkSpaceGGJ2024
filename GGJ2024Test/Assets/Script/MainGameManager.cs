@@ -116,7 +116,7 @@ public class MainGameManager : MonoBehaviour
         endManager.FadeOut();
         yield return new WaitForSeconds(1f);
         endManager.SetActive(false);
-        endPanel.SetActive(true);
+        resultPanel.gameObject.SetActive(true);
         foreach (KeyValuePair<GodName,float> keyValuePair in godManager.godHPDic)
         {
             resultPanel.ChangeHP(keyValuePair.Key, keyValuePair.Value);

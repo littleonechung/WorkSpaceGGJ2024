@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1896940936823236249, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2513581861097977580, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1024
@@ -128,6 +132,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 247
       objectReference: {fileID: 0}
+    - target: {fileID: 6500033659730469671, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6631901801769528723, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
       propertyPath: m_Name
       value: BossGodLoki Variant
@@ -162,6 +170,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7404560483135511675, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483535989953241154, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487210906218743174, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7626784090665539726, guid: ea8679e6bbd122349b50d251a8bc4fe0, type: 3}
