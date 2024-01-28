@@ -35,6 +35,8 @@ public class GodManager : MonoBehaviour
             currentGodUICtrl.AngryFeedback.SetActive(!answer.IsCorrect);
             currentGodUICtrl.HappyFeedback.SetActive(answer.IsCorrect);
             currentGodUICtrl.HappySkin.SetActive(answer.IsCorrect);
+            if (!answer.IsCorrect)
+                ShowAngryAnime();
             if (!string.IsNullOrEmpty(answer.Response))
             {
                 currentGodUICtrl.DialogBubble.SetActive(true);
@@ -74,6 +76,15 @@ public class GodManager : MonoBehaviour
         {
             GodGO = Instantiate(dataSet.GodPrefab, GodRoot);
             currentGodUICtrl = GodGO.GetComponent<GodUICtrl>();
+        }
+    }
+
+    private void ShowAngryAnime()
+    {
+        RectTransform angryTrans = currentGodUICtrl.AngryFeedback.GetComponent<RectTransform>();
+        if (angryTrans != null)
+        {
+            angryTrans.DOScale(4f, 0.2f).SetLoops(2,LoopType.Yoyo);
         }
     }
 }
