@@ -158,6 +158,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 527157008600390492, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34
+      objectReference: {fileID: 0}
     - target: {fileID: 1266028390499004531, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -186,6 +190,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4760732339284857819, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -39
+      objectReference: {fileID: 0}
     - target: {fileID: 4828328676583756211, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_Name
       value: BossGodSalaryMan
@@ -213,6 +221,10 @@ PrefabInstance:
     - target: {fileID: 6847486349930144410, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335342914282525554, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7699414542545753991, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_Pivot.x
