@@ -135,5 +135,9 @@ public class MainGameManager : MonoBehaviour
         godManager.ShowResponse(answer);
         ChangeGameStatus(GameStatus.WaitShowResponse);
     }
-   
+
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
 }
