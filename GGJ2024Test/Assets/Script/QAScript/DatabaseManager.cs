@@ -9,12 +9,14 @@ using UniRx;
 public class DatabaseManager : MonoBehaviour
 {
     [SerializeField] private QuestionDatabase _questionDatabase;
+    [SerializeField] private FadedText infoFadedText;
     [SerializeField] private FadedText question;
     [SerializeField] private List<FadedText> answers;
     [SerializeField] private List<GameObject> btns;
 
     private List<Question> currentQuestionList;
     private int currentQuestionIndex;
+    string info;
 
     public Action<Answer> onClickAnswerBtn;
     #region UI UPDATE METHODS
@@ -35,6 +37,10 @@ public class DatabaseManager : MonoBehaviour
             }
         }).AddTo(this);
     }
+    private void UpdateInfoText(string text)
+    {
+        infoFadedText.GenerateText(text);
+    }
     #endregion
 
     #region GENERAL METHODS
@@ -43,6 +49,15 @@ public class DatabaseManager : MonoBehaviour
         currentQuestionList = GetQuestionListViaGodName(godName);
     }
 
+    public void SetInfo(GodName godName)
+    {
+        info = GetInfoViaGodName(godName);
+    }
+
+    public void UpdateInfo()
+    {
+        UpdateInfoText(info);
+    }
     public void UpdateQuestion(bool isFirst)
     {
         if (isFirst)  
@@ -63,6 +78,13 @@ public class DatabaseManager : MonoBehaviour
             if (questionDictItem.Key == godName)
                 return questionDictItem.Questions;
         return null;
+    }
+    public string GetInfoViaGodName(GodName godName)
+    {
+        foreach (QuestionDictItem questionDictItem in _questionDatabase.script)
+            if (questionDictItem.Key == godName)
+                return questionDictItem.info;
+        return "......";
     }
     public List<Question> GetRandomQuestionListViaGodName(GodName godName)
     {

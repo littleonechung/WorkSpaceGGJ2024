@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossGod2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1557193703420235440, guid: 273d37aa9c617f741b103592523d2e5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2087785414783022456, guid: 273d37aa9c617f741b103592523d2e5f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 251
