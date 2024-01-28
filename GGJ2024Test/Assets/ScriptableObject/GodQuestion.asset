@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script:
   - Key: 1
+    info: "\u770B\u5230\u795E\u5F8C\u4F60\u5167\u5FC3\u7B2C\u4E00\u500B\u60F3\u6CD5\u662F\uFF0C\u795E\u7684\u5A01\u56B4\u4E0D\u53EF\u4FB5\u72AF"
     Questions:
     - Content: "\u4F60\u9700\u8981\u56DE\u7B54\u80FD\u53D6\u6085\u6211\u5011\u7684\u554F\u984C\uFF0C\u4F60\u4E86\u89E3\u55CE\uFF1F"
       Answers:
@@ -36,6 +37,7 @@ MonoBehaviour:
         Score: -50
         IsCorrect: 0
   - Key: 2
+    info: "\u770B\u8D77\u4F86\u662F\u4E00\u4F4D\u6EAB\u548C\u7684\u8001\u723A\u723A\u795E"
     Questions:
     - Content: "\u6211\u5348\u9910\u8A72\u5403\u4EC0\u9EBC\uFF1F"
       Answers:
@@ -94,6 +96,7 @@ MonoBehaviour:
         Score: 100
         IsCorrect: 1
   - Key: 3
+    info: "\u770B\u8D77\u4F86\u662F\u4E00\u4F4D\u559C\u6012\u7121\u5E38\u7684\u795E"
     Questions:
     - Content: "1+1=\u5E7E\uFF1F"
       Answers:
@@ -144,6 +147,7 @@ MonoBehaviour:
         Score: 30
         IsCorrect: 1
   - Key: 4
+    info: "\u662F\u4E00\u96BB\u53EF\u611B\u7684\u536F\u54AA\u4E4B\u795E"
     Questions:
     - Content: "\u55B5\u55B5\uFF0C\u55B5\u55B5\u55B5\uFF1F"
       Answers:
@@ -196,6 +200,7 @@ MonoBehaviour:
         Score: 100
         IsCorrect: 1
   - Key: 5
+    info: "\u770B\u8D77\u4F86\u662F\u4E00\u4F4D\u9752\u5E74\u5F62\u8C61\u7684\u795E"
     Questions:
     - Content: "\u4E00\u822C\u4F86\u8AAA\uFF0C\u7259\u818F\u6703\u5F9E\u524D\u9762\u64E0\u9084\u662F\u5F8C\u9762\uFF1F"
       Answers:
@@ -248,6 +253,7 @@ MonoBehaviour:
         Score: -30
         IsCorrect: 0
   - Key: 6
+    info: "\u9019\u4E0D\u662F\u7DADX\u55CE"
     Questions:
     - Content: "\u9019\u4E16\u4E0A\u6700\u68D2\u7684\u98DF\u7269\u662F\u4EC0\u9EBC\uFF1F"
       Answers:
@@ -294,6 +300,7 @@ MonoBehaviour:
         Score: 30
         IsCorrect: 1
   - Key: 7
+    info: "\u4E00\u958B\u59CB\u53EF\u6015\u7684\u795E\u53C8\u51FA\u73FE\u4E86\uFF0C\u4E0D\u77E5\u9053\u4ED6\u6703\u8AAA\u4EC0\u9EBC\uFF0C\u6015(\u6296"
     Questions:
     - Content: "\u9019\u500B\u904A\u6232\u597D\u7B11\u55CE\uFF1F"
       Answers:
