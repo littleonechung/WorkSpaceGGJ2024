@@ -110,6 +110,7 @@ public class MainGameManager : MonoBehaviour
     {
         infoPanel.SetActive(true);
         questionPanel.SetActive(false);
+        godManager.ResetGodUI();
         databaseManager.UpdateInfo();
         StartCoroutine(DelayShowQuestion());
     }
@@ -124,7 +125,6 @@ public class MainGameManager : MonoBehaviour
     {
         infoPanel.SetActive(false);
         questionPanel.SetActive(true);
-        godManager.ResetGodUI();
         databaseManager.UpdateQuestion(first);
     }
 
