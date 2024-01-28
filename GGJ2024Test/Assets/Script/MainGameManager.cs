@@ -66,7 +66,7 @@ public class MainGameManager : MonoBehaviour
                 ShowQuestion(true);
                 break;
             case GameStatus.WaitShowResponse:
-                Observable.Timer(System.TimeSpan.FromSeconds(2f)).Subscribe(_ => { ChangeGameStatus(GameStatus.NextQuestion); }).AddTo(this);
+                Observable.Timer(System.TimeSpan.FromSeconds(5f)).Subscribe(_ => { ChangeGameStatus(GameStatus.NextQuestion); }).AddTo(this);
                 break;
             case GameStatus.NextQuestion:
                 if(databaseManager.CheckNoQuestion())
