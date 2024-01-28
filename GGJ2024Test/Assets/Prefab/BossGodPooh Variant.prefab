@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 605347247815488750, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125.00001
+      objectReference: {fileID: 0}
     - target: {fileID: 2917291330087191721, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -32,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7ceacade488de5244b598a5d66a6ac54, type: 3}
+    - target: {fileID: 4685874980853747722, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 418bd0e6a5932e24483def738db0a053, type: 3}
     - target: {fileID: 4841391172773026046, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
       propertyPath: m_text
       value: "\u6211\u5011\u61F7\u5FF5\u4ED6"
@@ -47,6 +55,10 @@ PrefabInstance:
     - target: {fileID: 5492102109906992641, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
       propertyPath: m_Name
       value: BossGodPooh
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559678665064676457, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125
       objectReference: {fileID: 0}
     - target: {fileID: 5778503230616669480, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
       propertyPath: m_Name
@@ -147,6 +159,10 @@ PrefabInstance:
     - target: {fileID: 7345272205768144949, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708518899260308672, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125.000015
       objectReference: {fileID: 0}
     - target: {fileID: 9067376283504989190, guid: 37e8629ccfc26374b8560ec1bba991d4, type: 3}
       propertyPath: m_Sprite
