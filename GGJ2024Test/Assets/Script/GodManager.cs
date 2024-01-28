@@ -42,6 +42,10 @@ public class GodManager : MonoBehaviour
                 currentGodUICtrl.DialogBubble.SetActive(true);
                 currentGodUICtrl.DialogText.text = answer.Response;
             }
+            if (answer.IsCorrect)
+                SoundManager.Instance.PlaySound(AudioName.correct);
+            else
+                SoundManager.Instance.PlaySound(AudioName.incorrect);
         }
         OperateHp(answer.Score);
     }
