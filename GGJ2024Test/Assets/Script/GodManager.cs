@@ -88,7 +88,8 @@ public class GodManager : MonoBehaviour
         RectTransform angryTrans = currentGodUICtrl.AngryFeedback.GetComponent<RectTransform>();
         if (angryTrans != null)
         {
-            angryTrans.DOScale(4f, 0.15f).SetLoops(2,LoopType.Yoyo);
+            angryTrans.DOScale(4f, 0.15f).SetLoops(2,LoopType.Yoyo).SetEase(Ease.InOutBack);
         }
+        ShakeManager.Instance.Shake();
     }
 }
