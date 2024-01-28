@@ -188,7 +188,7 @@ MonoBehaviour:
       - Content: "\u55B5\u55B5\uFF01\uFF01\uFF01"
         Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
         Score: -30
-        IsCorrect: 1
+        IsCorrect: 0
     - Content: "\u55B5\u55B5\uFF0C\u55B5\u55B5\u55B5\uFF1F"
       Answers:
       - Content: "X\u676F\u5594\u7169\u6B7B\u4E86"
