@@ -90,8 +90,7 @@ public class GodManager : MonoBehaviour
     public void OperateHp(int _value)
     {
         godHPDic[godName] += _value;
-        if(godHPDic[godName] < 0)
-            godHPDic[godName] = 0;
+        godHPDic[godName] = Mathf.Clamp(godHPDic[godName], 0, 100);
         godHpFill.DOFillAmount(godHPDic[godName] / 100, 0.5f);
     }
 

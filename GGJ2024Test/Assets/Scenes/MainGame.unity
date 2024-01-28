@@ -765,6 +765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlbumCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2900636266478884877, guid: 720aae4e64ed49b40a81af14ab139336, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9138337496048426512, guid: 720aae4e64ed49b40a81af14ab139336, type: 3}
       propertyPath: m_Pivot.x
       value: 0
