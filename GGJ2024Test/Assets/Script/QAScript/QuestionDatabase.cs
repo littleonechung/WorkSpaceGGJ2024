@@ -20,6 +20,7 @@ public struct Question
 public struct QuestionDictItem
 {
     [SerializeField] public GodName Key;
+    [SerializeField] public string info;
     [SerializeField] public List<Question> Questions;
 }
 

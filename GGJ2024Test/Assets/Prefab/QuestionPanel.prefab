@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046a31f4910e3f54d96a8f36e88ab2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextAppearSpeed: 0.2
+  TextAppearSpeed: 0.1
 --- !u!1 &4890219200218886634
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questionDatabase: {fileID: 11400000, guid: 56b26c4d3cd2b9642a3e3d2a8147a9dc, type: 2}
+  infoFadedText: {fileID: 0}
   question: {fileID: 2288800251551433666}
   answers:
   - {fileID: 9027324290107827436}
