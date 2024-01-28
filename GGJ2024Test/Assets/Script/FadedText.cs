@@ -13,11 +13,13 @@ public class FadedText : MonoBehaviour
     {
         m_TextMeshPro = this.gameObject.GetComponent<TextMeshProUGUI>();
     }
+
     public void GenerateText(string src)
     {
         currentContent = src;
         StartCoroutine(generateText(src, m_TextMeshPro));
     }
+
     private IEnumerator generateText(string src, TextMeshProUGUI m_TextMeshPro)
     {
         string text = "";
@@ -25,6 +27,7 @@ public class FadedText : MonoBehaviour
         {
             text += src[i];
             m_TextMeshPro.SetText(text);
+            SoundManager.Instance.PlaySound(AudioName.talk1);
             yield return new WaitForSeconds(TextAppearSpeed);
         }
     }

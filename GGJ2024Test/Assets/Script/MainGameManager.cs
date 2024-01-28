@@ -113,6 +113,7 @@ public class MainGameManager : MonoBehaviour
         godManager.ResetGodUI();
         databaseManager.UpdateInfo();
         StartCoroutine(DelayShowQuestion());
+        SoundManager.Instance.PlayBGM(AudioName.stage_start,false);
     }
 
     IEnumerator DelayShowQuestion()
