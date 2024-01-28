@@ -66,7 +66,7 @@ public class MainGameManager : MonoBehaviour
                 ShowQuestion(true);
                 break;
             case GameStatus.WaitShowResponse:
-                Observable.Timer(System.TimeSpan.FromSeconds(2f)).Subscribe(_ => { ChangeGameStatus(GameStatus.NextQuestion); }).AddTo(this);
+                Observable.Timer(System.TimeSpan.FromSeconds(5f)).Subscribe(_ => { ChangeGameStatus(GameStatus.NextQuestion); }).AddTo(this);
                 break;
             case GameStatus.NextQuestion:
                 if(databaseManager.CheckNoQuestion())
@@ -110,6 +110,7 @@ public class MainGameManager : MonoBehaviour
     {
         infoPanel.SetActive(true);
         questionPanel.SetActive(false);
+        godManager.ResetGodUI();
         databaseManager.UpdateInfo();
         StartCoroutine(DelayShowQuestion());
     }
@@ -123,8 +124,8 @@ public class MainGameManager : MonoBehaviour
     private void ShowQuestion(bool first = false)
     {
         infoPanel.SetActive(false);
-        questionPanel.SetActive(true);
         godManager.ResetGodUI();
+        questionPanel.SetActive(true);
         databaseManager.UpdateQuestion(first);
     }
 

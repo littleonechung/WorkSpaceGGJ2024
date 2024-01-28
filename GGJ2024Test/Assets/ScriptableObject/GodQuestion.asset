@@ -152,51 +152,51 @@ MonoBehaviour:
     - Content: "\u55B5\u55B5\uFF0C\u55B5\u55B5\u55B5\uFF1F"
       Answers:
       - Content: "\u55B5"
-        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01\uFF08\u6263\u5206\uFF09"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
         Score: -30
         IsCorrect: 0
       - Content: "\u55B5\u55B5"
-        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01\uFF08\u6263\u5206\uFF09"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
         Score: -30
         IsCorrect: 0
     - Content: "\u55B5\uFF5E\uFF5E\uFF5E\u55B5\uFF5E\uFF5E\uFF5E\uFF5E"
       Answers:
-      - Content: "\u7D66\u8C93\u98FC\u6599"
-        Response: "\u54B3\u3001\u54B3\u54B3\uFF01\uFF08\u5614\u5410\uFF09\uFF08\u6263\u5206\uFF09"
+      - Content: "\u55B5\u55B5\u55B5"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
         Score: -30
         IsCorrect: 0
-      - Content: "\u6E05\u7406\u8C93\u7802"
-        Response: "\uFF08\u8D70\u9032\u6E05\u5B8C\u7684\u8C93\u7802\u8212\u723D\u5730\u62C9\u4E86\u4E00\u6CE1\U0001F4A9\uFF09\uFF08\u52A0\u5206\uFF09"
-        Score: 30
-        IsCorrect: 1
+      - Content: "\u55B5\uFF01"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01\uFF09"
+        Score: -30
+        IsCorrect: 0
     - Content: "\u55B5\uFF01"
       Answers:
-      - Content: "\u6478\u6478\u7260"
-        Response: "\u54AC\u4F60\u4E00\u53E3\uFF08\u6263\u5206\uFF09"
-        Score: -30
-        IsCorrect: 1
-      - Content: "\u7D66\u8C93\u98FC\u6599"
-        Response: "\u52C9\u70BA\u5176\u96E3\u5730\u5403\u4E86\u5E7E\u53E3\uFF08\u52A0\u5206\uFF09"
-        Score: 30
-        IsCorrect: 1
-    - Content: "\u55B5\u2026\u55B5\uFF5E"
-      Answers:
-      - Content: "\u7D66\u7260\u526A\u6307\u7532"
-        Response: "\u6399\u624E\u9003\u8D70\uFF08\u6263\u5206\uFF09"
+      - Content: "\u55B5...\u55B5\uFF01"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
         Score: -30
         IsCorrect: 0
-      - Content: "\u7D66\u7260\u68B3\u6BDB"
-        Response: "\u55B5\uFF5E\uFF08\u52A0\u5206\uFF09"
-        Score: 30
+      - Content: "\u55B5\u55B5...\u55B5..."
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
+        Score: -30
+        IsCorrect: 0
+    - Content: "\u55B5\u2026\u55B5\uFF5E"
+      Answers:
+      - Content: "\u55B5\uFF5E\uFF5E\u55B5\uFF5E\uFF5E"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
+        Score: -30
+        IsCorrect: 0
+      - Content: "\u55B5\u55B5\uFF01\uFF01\uFF01"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
+        Score: -30
         IsCorrect: 1
     - Content: "\u55B5\u55B5\uFF0C\u55B5\u55B5\u55B5\uFF1F"
       Answers:
-      - Content: "\u55B5\u55B5\u55B5\uFF01"
-        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01\uFF08\u6263\u5206\uFF09"
+      - Content: "X\u676F\u5594\u7169\u6B7B\u4E86"
+        Response: "\u55B5\u55B5\uFF01\uFF01\uFF01"
         Score: -30
         IsCorrect: 0
       - Content: "\u62FF\u51FA\u9BAA\u9B5A\u8C93\u7F50\u982D"
-        Response: "\u55B5\u55B5(\u611B\u5FC3)(\u76F4\u63A5\u6EFF\u5206)"
+        Response: "\u55B5\u55B5(\u611B\u5FC3)"
         Score: 100
         IsCorrect: 1
   - Key: 5
