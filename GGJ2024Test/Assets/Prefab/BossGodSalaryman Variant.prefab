@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5534103746057911842, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5634536307156533176, guid: 5a49f3df8e1a88844acd9df64c1fc915, type: 3}
       propertyPath: m_Sprite
       value: 
