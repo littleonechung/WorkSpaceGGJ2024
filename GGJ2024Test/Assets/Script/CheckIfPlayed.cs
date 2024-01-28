@@ -1,16 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckIfPlayed : MonoBehaviour
 {
-    private bool PlayedBefore = false;
-    public void Awake()
+    public bool PlayedBefore = false;
+    public void Check()
     {
-        this.gameObject.SetActive(PlayedBefore);
+        gameObject.SetActive(PlayedBefore);
     }
     public void IsPlayed()
     {
         PlayedBefore = true;
     }
+
+
 }
