@@ -21,6 +21,8 @@ public class MainGameManager : MonoBehaviour
 {
     public GameObject questionPanel;
     public GameObject infoPanel;
+    public GameObject endPanel;
+    public ResultPanel resultPanel;
     public EndManager endManager;
     public CheckIfPlayed checkIfPlayed;
     public DatabaseManager databaseManager;
@@ -56,6 +58,11 @@ public class MainGameManager : MonoBehaviour
     {
         ChangeGameStatus(GameStatus.SwitchGod);
     }
+    public void RestartGame()
+    {
+        endPanel.SetActive(false);
+        ChangeGameStatus(GameStatus.GameInit);
+    }
 
     private void ChangeGameStatus(GameStatus status)
     {
@@ -88,7 +95,14 @@ public class MainGameManager : MonoBehaviour
                     ShowQuestion();
                 break;
             case GameStatus.End:
-                endManager.SuccessEnd();
+                if (godManager.GetResult())
+                {
+                    endManager.SuccessEnd();
+                }
+                else
+                {
+                    endManager.FailEnd();
+                }
                 StartCoroutine(ShowEnding());
                 break;
             default: break;
@@ -98,11 +112,15 @@ public class MainGameManager : MonoBehaviour
     IEnumerator ShowEnding()
     {
         endManager.FadeIn();
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         endManager.FadeOut();
         yield return new WaitForSeconds(1f);
         endManager.SetActive(false);
-        ChangeGameStatus(GameStatus.GameInit);
+        endPanel.SetActive(true);
+        foreach (KeyValuePair<GodName,float> keyValuePair in godManager.godHPDic)
+        {
+            resultPanel.ChangeHP(keyValuePair.Key, keyValuePair.Value);
+        }
     }
 
     private void InitGame()
@@ -112,6 +130,7 @@ public class MainGameManager : MonoBehaviour
             databaseManager.onClickAnswerBtn += OnClickAnser;
             isFirstGame = true;
         }
+        godManager.Init();
         titleCanvas.gameObject.SetActive(true);
         currentGodList.Clear();
         GodName[] enumValues = (GodName[])Enum.GetValues(typeof(GodName));

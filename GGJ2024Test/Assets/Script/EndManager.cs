@@ -12,9 +12,12 @@ public class EndManager : MonoBehaviour
     GameObject failImg = null;
     [SerializeField]
     CanvasGroup canvasGroup;
+    [SerializeField]
+    GodManager godManager = null;
 
     [SerializeField]
     float fadeDuration = 1;
+
 
     public void SuccessEnd()
     {

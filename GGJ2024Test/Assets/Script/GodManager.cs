@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
@@ -14,17 +15,43 @@ public class GodManager : MonoBehaviour
     
     [SerializeField] private GodData data;
 
+    public Dictionary<GodName, float> godHPDic = new Dictionary<GodName, float>();
     private float godHp;
     private GodName godName;
     private GameObject GodGO = null;
     private GodUICtrl currentGodUICtrl;
 
+    public void Init()
+    {
+        godHPDic.Clear();
+        
+        GodName[] enumValues = (GodName[])Enum.GetValues(typeof(GodName));
+        foreach (GodName godName in enumValues)
+        {
+            if (godName != GodName.Default)
+            {
+                godHPDic[godName] = 0;
+            }
+        }
+    }
+
+    public bool GetResult()
+    {
+        float total = 0;
+        foreach (int value in godHPDic.Values)
+        {
+            total += value;
+        }
+
+        return total / godHPDic.Values.Count >= 50;
+    }
+
     public void Setup(GodName _name)
     {
         godName = _name;
         InstantiateGodGO(godName);
-        godHp = 0;
-        godHpFill.fillAmount = godHp/100;
+        godHPDic[godName] = 0;
+        godHpFill.fillAmount = godHPDic[godName]/100;
     }
 
     public void ShowResponse(Answer answer)
@@ -62,10 +89,10 @@ public class GodManager : MonoBehaviour
 
     public void OperateHp(int _value)
     {
-        godHp += _value;
-        if(godHp < 0)
-            godHp = 0;
-        godHpFill.DOFillAmount(godHp / 100, 0.5f);
+        godHPDic[godName] += _value;
+        if(godHPDic[godName] < 0)
+            godHPDic[godName] = 0;
+        godHpFill.DOFillAmount(godHPDic[godName] / 100, 0.5f);
     }
 
     private void InstantiateGodGO(GodName name)
